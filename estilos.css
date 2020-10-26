@@ -1,0 +1,241 @@
+*{
+	box-sizing: border-box;
+	padding:0px;
+	margin:0px 5px 0px 5px;
+	font-family: roboto;
+}
+body{
+	background-color: #130f40;
+}
+/*scroll del body*/
+body::-webkit-scrollbar{
+	width: 10px;
+	background-color: none;
+}
+body::-webkit-scrollbar-thumb{
+	background-color: #fff;
+	width: 100%;
+	border-radius: 5px;
+}
+/*Titulo*/
+header {
+	font-size: 50px;
+	text-align: center;
+	color:#fff;
+	animation-name: animacion;
+	animation-duration: 2s;
+}
+header h1{
+	word-spacing: 20px;
+	letter-spacing: 5px;
+}
+/*pagina en general*/
+main{
+	width: 100%;
+	height: 590px;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+/*Parte de imagen grande*/
+main .izquierda{
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin:20px;
+	justify-content: center;
+}
+main #imagenPrincipal{
+	width: 70%;
+	height: 85%;
+	 
+}
+/*Animación de la imagen grande*/
+@keyframes animacion{
+	0%{
+		opacity: 0%;
+		transform: scale(.1);
+	}
+	100%{
+		opacity: 100%;
+		transform: scale(1);
+	}
+}
+
+#imagenPrincipal img{
+	width: 100%;
+	height: 100%;
+	border:5px solid #fff;
+	border-radius: 2px;
+	animation-name: animacion;
+	animation-duration: 3s;
+}
+/*Sección de filtros*/
+main nav{
+	width: 100%;
+	height: 15%;
+	background-color: #34495e;
+	margin: 20px 25px 0px 25px;
+	border-radius: 10px;
+}
+/*palabra "filtros"*/
+main nav h2{
+	font-size: 20px;
+	margin: 7px;
+	text-transform: uppercase;
+	color:#000;
+}
+/*botones*/
+main nav{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main nav div{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	animation-name: animacion;
+	animation-duration: 2s;
+}
+main nav button{
+	width: 150px;
+	height: 30px;
+	border-radius: 10px;
+	font-family: roboto;
+	color:rgba(0,0,0,.8);
+	cursor: pointer;
+}
+
+
+.sepia{
+	filter: sepia(100%);
+}
+.grayscale{
+	filter: grayscale(100%);
+}
+.brillo{
+	filter: brightness(140%);
+}
+.blur{
+	filter: contrast(200%);
+}
+/*Acción de cuando el boton se active*/
+.btn-active{
+	background-color: #fab1a0;
+	/*classList.add*/
+}
+/*galeria de imagenes*/
+main aside{
+	width: 45%;
+	background-color: none;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	overflow-y: scroll;
+	margin:20px 20px;
+	animation-name: animacion;
+	animation-duration: 2s;
+}
+
+
+
+
+/*barra de scroll*/
+main aside::-webkit-scrollbar{
+	width: 8px;
+	background-color: none;
+}
+main aside::-webkit-scrollbar-thumb{
+	background-color: #fff;
+	width: 100%;
+	border-radius: 5px;
+}
+
+
+
+
+
+/*secciones por color*/
+main aside #oceano{
+	padding-top: 5px;
+	background-color: #686de0;
+}
+main aside #bosque{
+	padding-top: 5px;
+	background-color: rgba(23,219,0,.5);
+	margin:0px;
+}
+main aside #aire{
+	padding-top: 5px;
+	background-color: #C8F4FF;
+	margin:0px;
+}
+main aside #fuego{
+	padding-top: 5px;
+	background-color: rgba(255,15,0,.6);
+	margin:0px;
+}
+
+/*titulos generales*/
+main aside h2{
+	font-size: 30px;
+	margin:12px;
+}
+
+/*titulos específicos*/
+main aside #oceano h2{
+	color:#020A32;
+}
+main aside #bosque h2{
+	color:#804000;
+}
+main aside #aire h2{
+	color: #2B8C8F ;
+}
+main aside #fuego h2{
+	color: #850000;
+}
+
+
+/*propiedades de las imagenes*/
+main aside img{
+	padding:2px;
+	width: 140px;
+	height: 150px;
+	cursor: pointer;
+	margin-bottom: 30px;
+	border:2px solid #fff;
+	box-shadow: 1px 1px 2px black;
+}
+main aside img:hover{
+	border: 3px solid #34495e;
+	transition: all .2s;
+	opacity: .9;
+}
+
+/*division de cada seccion, 3 imagenes en cada division*/
+main aside .parteUno{
+	display: flex;
+	justify-content: space-around;
+}
+main aside .parteDos{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+
+/*pie de página*/
+footer{
+	width: 100%;
+	background-color: #0D051E;
+	color:#fff;
+	text-align: center;
+	padding:4px;
+	margin-top: 15px;
+}
